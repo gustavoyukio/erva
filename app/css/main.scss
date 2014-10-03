@@ -1,0 +1,89 @@
+//@import 'bootstrap';
+// VARIABLES
+// WIDTH
+$wrapper-width: 1600px;
+$wrapper-width-borderless: 1598px;
+$imgPath: '../images';
+// GERAL
+// MIXINS
+@mixin bShadow($valores) {
+	box-shadow: $valores;
+	-o-box-shadow: $valores;
+	-ms-box-shadow: $valores;
+	-moz-box-shadow: $valores;
+	-webkit-box-shadow: $valores;
+}
+// SECTIONS
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+ul {
+	list-style: none;
+	list-style-position: inside;
+}
+
+body, html{
+	background-color: lighten(#FFF4CB,6);
+}
+
+.wrapper {
+	margin: 0 auto;
+	z-index:3;
+	@include bShadow(0 0 15px 5px rgba(0,0,0,0.05));
+	border-left:1px solid #aeaeae;
+	border-right:1px solid #aeaeae;
+}
+
+.wrapper {
+	max-width: $wrapper-width;
+	overflow: hidden;
+}
+header, .banner {
+	max-width: $wrapper-width-borderless;
+	display: block;
+	@include bShadow(0 0 15px 5px rgba(0,0,0,0.1));
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	z-index:6;
+	background-color: #FFFfff;
+	top: 0;
+	height: 120px;
+}
+
+.banner {
+	width: 100%;
+	position: fixed;
+	height: 950px;
+	z-index: 4;
+	top: 0;
+	overflow: hidden;
+	background-color: #8CC739;
+	padding-top: 160px;
+	ul {
+		height: 650px;
+		li {
+
+		}
+	}
+}
+
+// Role Main
+// Sections
+#main, div[role="main"] {
+	background-color: #FFFfff;
+	height: 1500px;
+	margin-top: 850px;
+	z-index: 5;
+	position: relative;
+	@include bShadow(0 0 15px 5px rgba(0,0,0,0.05));
+}
+
+.packages {
+	
+}
