@@ -1,4 +1,5 @@
 - var $imgPath="/images";
+- var $biblioteca="";
 
 doctype html 
 html
@@ -7,10 +8,9 @@ html
         title|Erva.com
         meta(name="description", content="")
         meta(name="keywords", content="")
-        
         // CSS
-        link(rel='stylesheet', href='css/bootstrap.min.css')
-        link(rel='stylesheet', href='css/main.css')
+        link(rel='stylesheet', href=$biblioteca + 'css/bootstrap.min.css')
+        link(rel='stylesheet', href=$biblioteca + 'css/main.css')
     body
         .wrapper
             
@@ -19,11 +19,9 @@ html
                     block navigation
 
             section.banner
-                //img(src="images/banner.jpg", alt="")
                 article.container
                     ul
-                        li.
-                            
+                        li                            
 
             #main(role="main")
                 block home
