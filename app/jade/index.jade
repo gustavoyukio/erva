@@ -10,21 +10,41 @@ block navigation
 	a(href="http://", target="_blank") login
 
 block home
+	section
+		article.container.fast-promo
+			figure
+				img(src="images/deliver.png", alt="")
+				figcaption.
+					Entrega de graca
+
 	section.packages
 		article.container
+			hgroup
+				h2.
+					Trabalhamos para trazer o melhor da fazenda pra sua mesa.
+				h3.
+					Escolha uma das opcoes abaixo ou va para a loja <a href="">clicando aqui</a>
 			ul.boxes
 				li
-					h2.
+					h3.
 						Promoções <br/>
 						<span> Verdes da estação de melhor qualidade </span>
 					img(src=$imgPath + "/basket.jpg", alt="", class="boxes-images")
 				li
-					h2.
+					h3.
 						Cestas <br/>
 						<span> Cestas personalizadas para você </span>
 					img(src=$imgPath + "/basket.jpg", alt="", class="boxes-images")
 				li
-					h2.
+					h3.
 						Assinaturas <br/>
 						<span> Assine e receba sempre </span>
 					img(src=$imgPath + "/basket.jpg", alt="", class="boxes-images")
+
+	section.vantagens
+		article.container
+			div.division
+				span
+					img(src=$imgPath + "/food.jpg", alt="")
+			h2.
+				Vantegens que damos a nossos clientes

@@ -36,6 +36,8 @@ $imgPath: '../images';
     -webkit-box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
 }
 ul {
     list-style: none;
@@ -98,6 +100,21 @@ header {
     z-index: 5;
     position: relative;
     @include bShadow(0 0 15px 5px rgba(0,0,0,0.3));
+    h2, h3, h4, h5 {
+        text-align: center;
+    }
+}
+
+// PROMO
+.fast-promo {
+    figure {
+        margin: 40px 0;
+        background-color: #f4db00;
+        max-height: 100px;
+        overflow: hidden;
+        background: url(#{$imgPath}/promo.jpg) no-repeat center center;
+        background-size: 100%;
+    }
 }
 
 // PACKAGES
@@ -114,7 +131,7 @@ header {
         width: 250px;
         text-align: center;
         @include trans( all .3s 0 linear);
-        h2 {
+        h3 {
             bottom: 10px;
             color: #ffffff;
             line-height: 15px;
@@ -140,4 +157,41 @@ header {
             @include bShadow( 0 0 15px 5px rgba(0,0,0,0.4));
         }
     }
+}
+
+// VANTAGENS
+.vantagens {
+    background-color: #f8f8f8;
+    margin-top: 45px;
+    padding-top: 30px;
+    border-top: 3px solid #F0F0CE;
+    background: url(#{$imgPath}/soil.png) repeat;
+    .division {
+        text-align: center;
+        span {
+            position: relative;
+            width: 100%;
+            display: block;
+            img {
+                height: 40px;
+                padding: 0 20px;
+                z-index: 4;
+                position: relative;
+            }
+            &:after {
+                content: " ";
+                border: 1px solid #dddddd;
+                position: absolute;
+                left: 0;
+                top: 1.2em;
+                width: 100%;
+                z-index: 3;
+            }
+        }
+    }
+}
+
+// FOOTER
+footer {
+    background: #3f352d url(/sites/all/themes/infra/assets/images/soil.png) repeat;
 }
