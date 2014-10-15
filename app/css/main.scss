@@ -1,3 +1,6 @@
+// FONTS
+@import "fonts/main";
+
 // VARIABLES
 // WIDTH
 $wrapper-width: 1600px;
@@ -36,7 +39,7 @@ $imgPath: '../images';
     -webkit-box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lucida Grande ,Helvetica, Arial, Verdana;
     color: #666666;
 }
 ul {
@@ -107,22 +110,43 @@ header {
 
 // PROMO
 .fast-promo {
-    figure {
-        margin: 40px 0;
-        background-color: #f4db00;
-        max-height: 100px;
-        overflow: hidden;
-        background: url(#{$imgPath}/promo.jpg) no-repeat center center;
+    p{
+        background: url(#{$imgPath}/promo.jpg) no-repeat center;
         background-size: 100%;
+        border:1px solid #cb9900;
+        color: #ffffff;
+        font-size: 19px;
+        line-height: 100px;
+        margin: 40px auto;
+        min-height: 100px;
+        text-shadow: 1px 1px #999999;
+        width: 80%;
+        i {
+            &:before {
+                color: #ffffff;
+                font-size: 80px;
+                margin: 0px 40px;
+                text-shadow: 1px 1px #666666;
+                vertical-align: middle;
+            }
+        }
     }
 }
 
 // PACKAGES
 // BOXES
+.packages {
+    > h2,h3 {
+        font-size: 24px;
+    }
+    > h3 {
+        font-size: 15px;   
+    }
+}
 .boxes {
     text-align: center;
     li {
-        border: 1px solid rgba(0,0,0,0.2);
+        border: 1px solid rgba(0,0,0,0.1);
         display: inline-block;
         margin: 30px 35px 0;
         height: 325px;
@@ -130,7 +154,7 @@ header {
         position: relative;
         width: 250px;
         text-align: center;
-        @include trans( all .3s 0 linear);
+        @include trans( all .1s 0 linear);
         h3 {
             bottom: 10px;
             color: #ffffff;
@@ -150,7 +174,7 @@ header {
         img {
             transform: translateX(-50%) scale(0.8);
             position: absolute;
-            top: -60px;
+            top: -20px;
             z-index: 4;
         }
         &:hover {
@@ -187,6 +211,48 @@ header {
                 width: 100%;
                 z-index: 3;
             }
+        }
+    }
+    ul {
+        width: 70%;
+        margin: 40px auto;
+        &:after {
+            clear: both;
+            content: " ";
+            display: block;
+        }
+    }
+}
+
+.vtg {
+    position: relative;
+    min-height: 200px;
+    img, figcaption {
+        position: absolute;
+    }
+    img {
+        border: 10px solid #ffffff;
+        height: 190px;
+        transform: rotateZ(15deg);
+        vertical-align: middle;
+        @include bShadow(0 0 15px 2px rgba(0,0,0,0.2));
+    }
+    figcaption {
+        left: 30%;
+        h3 {
+            font-family: Mayqueen, sans-serif;
+            font-size: 36px;
+            margin-top: 60px;
+        }
+    }
+    &.even {
+        img {
+            right: 0;
+            transform: rotateZ(-15deg);
+        }
+        figcaption {
+            left: 10%;
+            margin-top: 20px;
         }
     }
 }

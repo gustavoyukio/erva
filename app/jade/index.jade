@@ -12,10 +12,9 @@ block navigation
 block home
 	section
 		article.container.fast-promo
-			figure
-				img(src="images/deliver.png", alt="")
-				figcaption.
-					Entrega de graca
+			p
+				i.flaticon-delivery18
+				|Entregas de graca nas compras acima de R$ 100,00 e brinde de lancamento do site.
 
 	section.packages
 		article.container
@@ -34,7 +33,7 @@ block home
 					h3.
 						Cestas <br/>
 						<span> Cestas personalizadas para você </span>
-					img(src=$imgPath + "/basket.jpg", alt="", class="boxes-images")
+					img(src=$imgPath + "/boxes.jpg", alt="", class="boxes-images")
 				li
 					h3.
 						Assinaturas <br/>
@@ -47,4 +46,23 @@ block home
 				span
 					img(src=$imgPath + "/food.jpg", alt="")
 			h2.
-				Vantegens que damos a nossos clientes
+				Vantagens que damos a nossos clientes
+			ul
+				li
+					figure.vtg
+						img(src=$imgPath + "/man.jpg", alt="")
+						figcaption
+							h3.
+								Qualidade e Frescor em todos os nossos produtos.
+				li
+					figure(class="vtg even")
+						img(src=$imgPath + "/li03.jpg", alt="")
+						figcaption
+							h3.
+								Entrega agenda e garantida por nossa empresa.
+				li
+					figure(class="vtg")
+						img(src=$imgPath + "/li02.jpg", alt="")
+						figcaption
+							h3.
+								Cestas com vegetais e frutas para todos.
